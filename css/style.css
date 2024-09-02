@@ -1,0 +1,105 @@
+@import "reset.css";
+
+/* variables */
+:root{
+    --primary: #AA0601;
+    --bg-light: #FBF2F2;
+}
+
+/* base */
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", "Noto Sans TC";
+    line-height: 1.5;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* common */
+.d-flex{
+    display: flex;
+}
+
+.bg-primary{
+    background: var(--primary);
+}
+
+.color-w{
+    color: white;
+}
+
+/* container */
+.container{
+    /* width: 1296px; 視窗縮小依然固定寬度，所以會出現 X 軸 */
+    max-width: 1320px; /* 跟著視窗寬度做改變 */
+    margin: 0 auto;
+
+    /* 當視窗縮小時，內容也不會整個貼在視窗邊緣上 */
+    padding: 0 12px;
+    /* 因為使用 border-box 計算盒模型會壓縮到內容空間，所以上方寬度要補回去左右推出的 padding 值) */
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* nav */
+.logo{
+    width: 80px;
+    height: 48px;
+}
+
+nav .nav-list{
+    font-size: 20px;
+}
+
+nav .nav-item{
+    padding: 25px 32px;
+}
+
+/* footer */
+.footer-top{
+    justify-content: space-between;
+    padding-top: 48px;
+}
+.footer-nav .nav-list{
+    gap: 48px;
+}
+.contact-list{
+    font-size: 36px;
+    padding-bottom: 32px;
+    padding-top: 36px;
+}
+.material-symbols-outlined {
+    font-size: 36px;
+    vertical-align: middle;
+    margin-right: 22px;
+}
+.icon{
+    gap: 32px
+}
+.icon img{
+    width: 48px;
+}
+
+.copyright{
+    border-top: 1px solid white;
+    padding: 32px 0;
+    justify-content: space-between;
+}
+
+.privacy{
+    gap: 24px;
+    font-size: 14px;
+}
